@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone List by Levi Ackerman</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Welcome to the Phone List By Levi Ackerman</h1>
+<p>Check Our Available Services!</p>
+
+<div class="main-container">
+    <div class="left-section">
+        <div class="menu">
+            <button onclick="showAddContact()">
+                <span>Insert A Contact Name</span>
+            </button>
+            <button id="displayButton" onclick="displayContacts()">
+                <span>Print Menu</span>
+            </button>
+            <button onclick="showSearchContact()">
+                <span>Search Menu</span>
+            </button>
+            <button onclick="showDeleteContact()">
+                <span>Delete Menu</span>
+            </button>
+        </div>
+    </div>
+
+    <div class="right-section">
+        <div id="contactList" class="hidden">
+            <h2>Contact List</h2>
+            <ul id="contacts"></ul>
+        </div>
+
+        <div id="addContact" class="form-container">
+            <h2>Add Contact</h2>
+            <input type="text" id="contactName" placeholder="Enter Name">
+            <input type="text" id="contactPhone" placeholder="Enter Phone Number">
+            <div class="btn-group">
+                <button onclick="addContact()"><span>Add Contact</span></button>
+                <button onclick="hideForms()"><span>Cancel</span></button>
+            </div>
+        </div>
+
+        <div id="searchContact" class="form-container">
+            <h2>Search Contact</h2>
+            <input type="text" id="searchName" placeholder="Enter Name for Search">
+            <div class="btn-group">
+                <button onclick="searchContact()"><span>Search</span></button>
+                <button onclick="hideForms()"><span>Cancel</span></button>
+            </div>
+
+        </div>
+
+        <div id="deleteContact" class="form-container">
+            <h2>Delete Contact</h2>
+            <input type="text" id="deleteName" placeholder="Enter Name for Delete">
+            <div class="btn-group">
+                <button onclick="deleteContact()"><span>Delete</span></button>
+                <button onclick="hideForms()"><span>Cancel</span></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
